@@ -1,0 +1,154 @@
+<!--inspired by old-fashioned computer navigation menus-->
+<!--learned some tips and techniques using http://learnlayout.com/box-sizing.html, https://stackoverflow.com/questions/16653958/webkit-box-vs-boxflex, https://developer.mozilla.org/en-US/docs/Web/CSS/box-flex, https://developer.mozilla.org/en-US/docs/Web/CSS/:target-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Duc's Place</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="icon" href="#" />
+
+  <!--CSS code-->
+  <style>
+    * {
+      margin:0;
+      padding:0;
+    }
+    html,body {
+      height:100%;
+    }
+    body {
+      display:-webkit-box;
+      -webkit-box-orient:vertical;
+      -webkit-box-pack:center;
+      -webkit-box-align:center;
+      font-family:"Andale Mono", AndaleMono, monospace;
+      font-size: 12px;
+      background:#C1ECE2;
+    }
+    div {
+      width:500px;
+      background:#FFB6C1;
+    }
+    p {
+      height:0;
+      padding:0 15px;
+      overflow:hidden;
+      -webkit-transition:height .4s ease-out, padding .4s ease-out;
+      transition:height .4s ease-out, padding .4s ease-out;
+    }
+    h1 {
+      font-size:1em;
+    }
+    a {
+      display:block;
+      color: white;
+      text-align: center;
+      height:20px;
+      line-height: 20px;
+      background:#D3D3D3
+      border-bottom: 1px solid white;
+      border-bottom:1px solid white;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+
+    :target + p {
+      padding:10px 15px;
+      border-bottom:1px solid #ccc;
+    }
+
+    #contact:target + p {
+      height:140px;
+    }
+
+    #banhbun:target + p {
+      height:480px;
+    }
+
+    #soupspho:target + p {
+      height:180px;
+    }
+
+    #drinks:target + p {
+      height:210px;
+    }
+
+  </style>
+
+</head>
+
+<!--HTML Code-->
+<body>
+  <div>
+
+    <section>
+      <a href="#contact" id="contact"><h1>Contact & Visit Us</h1></a>
+        <p>
+          <b>CONTACT US</b><br><br>167 Orange Street<br>New Haven, CT<br>203.691.1470
+          <br><br><b>HOURS</b><br><br>Mon-Fri 8:00 am - 8:00 pm<br>Sat 11:00 am - 4:00 pm
+        </p>
+    </section>
+
+    <section>
+      <a href="#banhbun" id="banhbun"><h1>Bánh Mì & Bún</h1></a>
+      <p>
+        <b>BÁNH MÌ (SANDWICH)</b>
+        <br><br>Served on toasted home made bread with fresh cucumber, cilantro, jalapeño, and pickled carrots & daikon with your choice of meat or tofu.
+        <br><br><b>BÚN (RICE NOODLES)</b>
+        <br><br>Served over mixed greens, with fresh cucumber, cilantro, mint, and pickled carrots & daikon with your choice of meat or tofu. Fish sauce on the side.
+        <br><br><b>PROTEIN OPTIONS</b>
+        <br><br><u>Classic $8.50:</u>
+        <br>Traditional cold cuts of steamed pork rolls. Bánh Mì comes with house paté spread.
+        <br><u>Grilled Beef $9.00:</u>
+        <br>Tender beef marinated in honey, sesame oil, and garlic. Bánh Mì comes with house paté spread.
+        <br><u>Grilled Lemongrass Pork $8.50:</u>
+        <br>Juicy pork grilled with lemongrass, brown sugar, spring onion, and garlic. Bánh Mì comes with house paté spread and Maggi Soy Sauce.
+        <br><u>Hanoi Grilled Fish $9.00:</u>
+        <br>Succulent Tilapia marinated in turmeric and dill grilled and lightly fried. Served with fresh dill.
+        <br><u>Rotisserie Chicken $8.50:</u>
+        <br>Vietnamese-style rotisserie chicken and sauteed spring onion.
+        <br><u>Lemongrass Tofu $8.50:</u>
+        <br>Crisped tofu marinated and caramelized in lemongrass and onion.
+        <br><u>Yuba & Shitaki $8.50</u>
+        <br>Special tofu skin with Shitaki mushrooms and onion tossed with a vegetarian soy sauce.
+      </p>
+    </section>
+
+    <section>
+      <a href="#soupspho" id="soupspho"><h1>Soups & Pho</h1></a>
+      <p>
+        <b>SOUPS</b>
+        <br>[Served With Our Home Made Bread]
+        <br><br><u>Ca Ri Ga (Chicken Curry) $6.00:</u>
+        <br>Tender chicken thighs in a curry broth of lemongrass, ginger, onion, & potato.
+        <br><br><b>PHO</b>
+        <br>[Fridays Only!]
+        <br><br><u>Beef* $9.00</u>
+        <br>Classic rice noodle soup with rare round eye, brisket, & meatballs. Served with fresh herbs.
+      </p>
+    </section>
+
+    <section>
+      <a href="#drinks" id="drinks"><h1>Drinks & Smoothies</h1></a>
+      <p>
+        <b>DRINKS</b>
+        <br><br>Vietnamese Coffee $3.50
+        <br>Vietnamese Iced Coffee $4.00
+        <br>Cold Pressed Juices $4.99
+        <br>Tropical Fruit Juices $2.00
+        <br>Sodas $1.00
+        <br><br><b>SMOOTHIES</b>
+        <br><br>Durian $4.50
+        <br>Mango $4.00
+        <br>Avocado $4.00
+        <br>Soursop $4.00
+        <br>Guava $4.00
+      </p>
+    </section>
+
+  </div>
+    </body>
+    </html>
