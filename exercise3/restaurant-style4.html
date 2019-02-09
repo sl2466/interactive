@@ -1,0 +1,212 @@
+<!-- inspired by restaurant El Burro's online container http://elburro.no/ -->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Duc's Place</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <link rel="icon" href="#" />
+
+<!--CSS code-->
+
+<style>
+#container,#container .containertext,#container .wrap,.section {
+    overflow: hidden;
+    clear: both;
+}
+
+.transform-wrapper,.transform-wrapper svg,body,img#map,img#map:hover,section.yellow #fb_block,section.yellow #fb_block:hover {
+    -webkit-backface-visibility: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 800;
+    color: black;
+  }
+
+p{
+    font-size: 30px;
+  }
+
+body {
+    -webkit-font-smoothing: antialiased;
+    /* background-color: pink; */
+    background-image: url("noodles4.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+* {
+    outline: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#container .containerblock {
+    border: 4px solid #000;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+#container .containerblock p.num {
+    font-size: 32px;
+    border-right: 4px solid #000;
+    padding: 10px 18px;
+    display: inline-block;
+    text-align: left;
+}
+
+#container .containerblock .containerheader {
+    border-bottom: 4px solid #000;
+    text-align: left;
+}
+
+#container .containerblock p.title {
+    display: inline-block;
+    padding: 0 10px;
+    text-align: left;
+}
+
+#container .containerblock p.detalj {
+    padding: 25px 25px 0;
+    text-align: left;
+}
+
+#container .containerblock p.detalj:last-child {
+    padding-bottom: 35px;
+}
+
+#container .containerblock p.detalj,#container .containerblock p.title {
+    font-size: 27px;
+}
+
+#container .containertext {
+    width: 1003px;
+    margin: 0 auto;
+}
+
+#gallery h1,#container h1 {
+    text-align: center;
+    font-size: 70px;
+    padding-bottom: 50px;
+}
+
+
+#container {
+    padding-top: 125px;
+    width: 1185px;
+    margin: 0 auto 120px;
+    position: relative;
+    text-align: center;
+}
+
+#container .containerblock:first-child {
+    width: 359px;
+    margin-bottom: 33px;
+    margin-left: 128px;
+    float: left;
+}
+
+#container .containerblock:nth-child(2) {
+    width: 485px;
+    margin-bottom: 33px;
+    float: right;
+}
+
+#container .containerblock:nth-child(3) {
+    width: 489px;
+    margin-bottom: 33px;
+    float: left;
+    margin-right: -27px;
+    margin-top: 0;
+}
+
+#container .containerblock:last-child {
+    width: 354px;
+    float: right;
+    margin-top: -.1em;
+    margin-right: 8.2em;
+}
+
+</style>
+</head>
+
+<!--HTML code-->
+
+<body>
+  <div id="container">
+    <h1>Duc's Place</h1>
+
+    <div class="containertext">
+      <div class="wrap">
+        <div class="containerblock">
+          <div class="containerheader">
+            <p class="num">1</p>
+            <p class="title">Choose Your Style</p>
+          </div>
+          <p class="detalj">Bánh Mì (Sandwich)</p>
+          <p class="detalj">Bún (Rice Noodle)</p>
+
+        </div>
+        <div class="containerblock">
+          <div class="containerheader">
+            <p class="num">2</p>
+            <p class="title">Choose Your Protein</p>
+          </div>
+          <p class="detalj">Cold Cuts $8.50</p>
+          <p class="detalj">Grilled Beef $9.00</p>
+          <p class="detalj">Lemongrass Pork $8.50</p>
+          <p class="detalj">Hanoi Fish $9.00</p>
+          <p class="detalj">Rotisserie Chicken $8.50</p>
+          <p class="detalj">Lemongrass Tofu $8.50e</p>
+          <p class="detalj">Yuba & Shitaki $8.50</p>
+
+        </div>
+        <div class="containerblock">
+          <div class="containerheader">
+            <p class="num">3</p>
+            <p class="title">Choose Your Toppings</p>
+          </div>
+          <p class="detalj">Cucumber</p>
+          <p class="detalj">Cilantro</p>
+          <p class="detalj">Spring Onion</p>
+          <p class="detalj">Garlic</p>
+          <p class="detalj">Jalapeño</p>
+          <p class="detalj">Pickled Carrots</p>
+          <p class="detalj">Pickled Daikon</p>
+          <p class="detalj">House Paté (+$2.00)</p>
+
+        </div>
+        <div class="containerblock">
+          <div class="containerheader">
+            <p class="num">4</p>
+            <p class="title">Choose Your Sauce</p>
+          </div>
+          <p class="detalj">Sesame Oil</p>
+          <p class="detalj">Honey</p>
+          <p class="detalj">Soy Sauce</p>
+          <p class="detalj">Fish Sauce</p>
+
+        </div>
+
+      </div>
+      <br><br><br><br>
+      <p>167 Orange Street<br>New Haven, CT<br>203.691.1470<br><a href="https://m.me/ducsplace?fbclid=IwAR3v4Foao_Aq61CgkXj_isSr_6CQzeYN0Dk4RZzihzKzwkCuFteIbRWCj7M">Message Us</a></p>
+      <br>
+      <p>Mon-Fri 8:00 am - 8:00 pm<br>Sat 11:00 am - 4:00 pm</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+</body>
+</html>

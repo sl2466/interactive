@@ -1,0 +1,180 @@
+
+<!--learned from https://gridbyexample.com/-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chinoiserie-town</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="#" />
+
+  <!--CSS Code-->
+  <style>
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+
+  body, a {
+    margin: 40px;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    background-color: #D2DFF1;
+    color: #EF7E55;
+  }
+
+  h1,
+  p, a {
+    margin: 0 0 1em 0;
+  }
+
+  .wrapper {
+    max-width: 940px;
+    margin: 0 20px;
+    display: grid;
+    grid-gap: 10px;
+  }
+
+
+  /* no grid support? */
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .wrapper {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-auto-rows: minmax(150px, auto);
+  }
+
+  .panel {
+    /* needed for the flex layout*/
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 200px;
+  }
+
+  .header,
+  .footer {
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 0 1 100%;
+    grid-column: 1 / -1;
+  }
+
+  .wrapper > * {
+    background-color: #112A85;
+    color: #EF7E55;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    margin-bottom: 10px;
+  }
+
+
+  /* We need to set the margin used on flex items to 0 as we have gaps in grid.  */
+
+  @supports (display: grid) {
+    .wrapper > * {
+      margin: 0;
+    }
+  }
+    </style>
+  </head>
+
+  <!--HTML Code-->
+  <body>
+    <div class="wrapper">
+      <header class="header">Chinoiserie-town</header>
+
+      <div class="panel">四</div>
+      <div class="panel">“Ai ya wo de ma!” exclaimed my mom, “Did we just travel back in time?”</div>
+      <div class="panel">“It feels more like we stepped into the Hollywood version of a Chinese period drama,” responded my dad.</div>
+      <div class="panel">“True, Zhong-guo ren would have never chosen this red and green color palette,” observed my mom.</div>
+      <div class="panel">Although the Chinese have traditionally associated scarlet hues with good fortune and joy, a common Chinese saying proclaims that “hong pei lu sai go pi,” roughly translating to “the combination of red and green is worse than dog shit.”</div>
+      <div class="panel">“Also, what’s up with this weird conglomerate of building styles from different regions?” pointed out my dad.</div>
+      <div class="panel">In Houston’s Chinatown, the menacing, humongous arch with tiered roofs in clashing red, green, blue, and gold shades looked like a failed attempt to transform an album cover for a 1970s American psychedelic rock band into a paifang, a traditional Chinese gateway also known as a dragon gate in America to make the pronunciation feasible.</div>
+      <div class="panel">A poster child for minimalistic southern Chinese architecture, the paifang should have been painted in a simple and classic color palette of black and white, but instead had a gaudy paint job characteristic of northern Chinese architecture featuring the most obnoxiously loud shades of blue, red, yellow, and green.</div>
+      <div class="panel">To Americans, dragon gates represent Chinatown and evoke China itself.</div>
+      <div class="panel">However, to actual Chinese people—like my parents—the disfigured paifangs look oddly foreign, like modern-day examples of the chinoiserie aesthetic popular during the 17th and 18th centuries, when colonial-era Europeans imitated and fetishized classical Chinese styles.</div>
+      <div class="panel">This distinctive quasi-Chinese architectural style is consistent among Chinatowns across the United States, whether in Houston, Los Angeles, D.C., or where it all started—San Francisco.</div>
+      <div class="panel">In the 1900s, the mayor of San Francisco commissioned two Americans, architect T. Paterson Ross and engineer A.W. Burgen, to commercialize the slum home of early Cantonese immigrants—also a red-light district—into the first Chinatown.</div>
+      <div class="panel">Neither Ross nor Burgen had ever been to China, so they relied on outdated images from the Song Dynasty and their own American ideas of what China should look like.</div>
+      <div class="panel">The result did not resemble China as much as it resembled the Asia section of Disney World’s Epcot since the city wanted to gentrify Chinatown into a tourist attraction.</div>
+      <div class="panel">American tourists loved Chinatown not only because they didn’t have to leave the country to get a taste of the Orient, but also because they got the version of China they envisioned: vaguely exotic but still friendly to middle-class white people.</div>
+      <div class="panel">All the future Chinatowns were modeled after the original San Francisco one.</div>
+      <div class="panel">Like Jackie Chan and Bruce Lee kung-fu movies, these Westerner-friendly Chinatowns made immense profits for their American developers and improved the public image of Chinese immigrants, but came at the cost of perpetuating misunderstandings about Chinese people and culture.</div>
+      <div class="panel">十</div>
+      <div class="panel">“It smells weird,” complained ten-year-old me, strolling down the Chinatown store aisles.</div>
+      <div class="panel">“It’s just the burning incense,” explained my mom.</div>
+      <div class="panel">Never had I smelled this scent, not even when I lived in China, probably because the tradition of burning incense had mostly faded away there.</div>
+      <div class="panel">Formerly a nation of Buddhists, the Chinese used to believe that the smoke from burning incense provided spiritual link between their souls and the Buddha.</div>
+      <div class="panel">I pored over other historical relics: jade-green bank notes—supposedly worth ten-thousand yuan in hell—that were burnt as offerings for one’s ancestors, and detailed manuals on Feng Shui, the Daoist philosophical system on how to harmonize people and objects with the environment.</div>
+      <div class="panel">The vegetarian and scientist in me cringed at the Chinese medicine: deer hooves soaked in alcohol, dried seahorses, and ginseng, a rare root more expensive than a human organ.</div>
+      <div class="panel">“Why are they selling all this junk? Nobody believes in this stuff anymore,” scoffed my dad.</div>
+      <div class="panel">As soon as we stepped out of the store, our ears exploded at the sound of firecrackers, gongs, drums, and chants.</div>
+      <div class="panel">Amidst the commotion stood two lions decorated in more ruffles and sequins than a Dancing With the Stars flamenco dress.</div>
+      <div class="panel">Underneath the lion costumes, performers danced, making the magenta and cerulean lions shimmy, do a simplified form of the worm, and wink at the audience.</div>
+      <div class="panel">Shocked at this absurd performance, the American audience, as well as my parents, took pictures as one lion stood on bamboo stilts to eat the green cabbage hanging from a traffic light.</div>
+      <div class="panel">This ancient tradition supposedly brought good luck because the traditional Chinese character for cabbage resembles the character for fortune.</div>
+      <div class="panel">While Americans still associated lion dances, Chinese medicine, Feng Shui, and hell money with China, these traditions mostly went out of practice after Mao Zedong purged the “Four Olds” to modernize China.</div>
+      <div class="panel">ince Mao’s Cultural Revolution outlawed old culture, customs, habits, and ideas, most mainland Chinese people—starting with my parents’ generation—have never experienced the old traditions still practiced in Chinatowns.</div>
+      <div class="panel">While American tourists may find these customs reflective of Chinese culture, the Chinese find them outdated, like practices featured as fun facts on museum labels.</div>
+      <div class="panel">“Mei guo zheng luo ho,” concluded my mom, criticizing the old-fashioned portrayal of China in an otherwise modern America.</div>
+      <div class="panel">十四</div>
+      <div class="panel">“Oh thank goodness! They have General Tsao’s chicken,” exclaimed Andrew, whose outfit consisted of salmon shorts, an aqua-blue polo, and Sperry’s.</div>
+      <div class="panel">“And chop suey! Phew, I was afraid I wouldn’t be able to eat anything,” sighed Courtney in her floral Lily Pulitzer dress.</div>
+      <div class="panel">I was having second thoughts on taking my vanta-white  friends to my go-to Chinatown hole-in-the-wall.</div>
+      <div class="panel">I relied on FuFu Café for the closest I could get to authentic Chinese food in Houston.</div>
+      <div class="panel">Although General Tsao’s chicken and chop suey were staples of Chinese takeout cuisine, it felt sacrilegious that these fake Chinese dishes had infiltrated my favorite Chinatown mom-and-pop shop.</div>
+      <div class="panel">General Tsao’s chicken has become an internationally recognized culinary classic of Hunan Province, but a dish with such name does not exist in classic Hunan texts.</div>
+      <div class="panel">Furthermore, the Hunanese, famous for their frighteningly high spice tolerance, would not enjoy General Tsao’s chicken, which does not have any kick.</div>
+      <div class="panel">Besides, chicken is not usually eaten in authentic Chinese cuisine because the Chinese prefer pork.</div>
+      <div class="panel">In reality, the most famous “Hunanese” dish was invented by an exiled Nationalist chef who fled from Communist China to Taiwan and eventually to America.</div>
+      <div class="panel">Chop suey, also almost entirely an American invention, translates into “odds and ends.”</div>
+      <div class="panel">According to its origin-story legend, starving drunken miners barged into the first Chinese restaurant, established in 1849 in San Francisco, asking for the cheapest and quickest dish.</div>
+      <div class="panel">Improvising, the chef scraped old food off of previous customers’ plates, drowned the leftovers in soy sauce, and served the miners this new dish.</div>
+      <div class="panel">Additionally, chop suey often includes vegetables like broccoli, carrots, or tomatoes, none of which grow in China.</div>
+      <div class="panel">Although Courtney thought she was ordering an authentic Chinese dish, chop suey is just as American as apple pie, baseball, or cultural appropriation.</div>
+      <div class="panel">In a desperate attempt to show my vanta-white friends real Chinese food, I ordered several classic Chinese dishes: pork and watercress dumplings, stir-fried bok choy, savory sticky rice cakes, and steamed pork with rice powder coating.</div>
+      <div class="panel">With a decent amount of prodding, I finally convinced my American friends to try a bite of each authentic dish.</div>
+      <div class="panel">After their polite tastings, they were satisfied with their brief and shallow dip into the “exotic” world of real Chinese food and returned to their General Tsao’s chicken and chop suey in relief.</div>
+      <div class="panel">十八</div>
+      <div class="panel">Dun Huang Plaza in Houston’s Chinatown may have become the new Williamsburg, Brooklyn thanks to trendy new restaurants with one-word names like Mein and Den, a booming nightlife fueled by karaoke bars and late-night bites, and dessert shops serving Instagrammable rolled ice cream and shaved snow creations.</div>
+      <div class="panel">Young, “hipster,” non-Chinese people now outnumber the Chinese people.</div>
+      <div class="panel">The San Francisco Chinatown model had predicted this phenomenon: Chinatowns were designed to be a tourist trap for Americans who want a diluted, comfortable experience of “China.”</div>
+      <div class="panel">Yet, the presence of a non-Chinese population has not prevented Houston’s Chinatown from acting as a Chinese-American microcosm.</div>
+      <div class="panel">Passing the foot spas that are actually fronts for prostitution and Chinese medicine “pharmacies” in Houston’s Chinatown, I head into Kung Fu Tea to meet up with some Chinese-American friends.</div>
+      <div class="panel">Upon entering, familiarity embraces me: the syrup-sweet scent of boba, the playlist that included both Chinese pop hits from my parents’ generation and current American top-40 songs, and the happy-go-lucky décor reminiscent of a modern Chinese or American sitcom.</div>
+      <div class="panel">I order my matcha slush with red bean, no sugar, no ice; Annie’s mango smoothie with egg custard, quarter sugar, extra ice; Aileen’s taro blend with boba, half sugar; Gracie’s Thai tea with rainbow jelly, no sugar, half ice; and Emily’s sunshine pineapple tea with boba, no ice.</div>
+      <div class="panel">A true friend knows your boba shop order, and everyone has a favorite boba joint among the nine in this one square, Dun Huang Plaza.</div>
+      <div class="panel">The viral Youtube song “Boba Life” observed: “It’s Chinese culture to stay with a cup of tea / We updated to pearls and sealing machines.”</div>
+      <div class="panel">Although tea has always been an important element of Chinese tradition and boba originated from Taiwan in 1986, since the early 2000s the children of Chinese immigrants in America have claimed that boba represents their culture.</div>
+      <div class="panel">With their long open hours, ubiquity, and multipurpose spaces often with individual meeting rooms, boba shops have become a perfect spot to work, host a meeting, or just hang out.</div>
+      <div class="panel">Boba joints have become the new Starbucks, popular not only among Chinese-American communities, but also among the overall American population.</div>
+      <div class="panel">Since American media usually portrays the sole Chinese-American character as the ostracized, socially awkward geek, the boba craze exemplifies a rare instance when something Chinese-American is cool in broader American culture.</div>
+      <div class="panel">Consequently, boba provides both a symbol and a source of pride for Chinese-Americans.</div>
+      <div class="panel">Four hours of laughter and conversation at Kung Fu Tea later, I part ways with my friends and go help file insurance claims at my parents’ dental clinic across the plaza.</div>
+      <div class="panel">Despite living in the United States for almost fifteen years, my parents still insist that their English is “not good enough” due to a popular misconception that only English spoken with “proper” grammar and pronunciation indicates an intelligent, respectable person.</div>
+      <div class="panel">Afraid that others may discriminate against them due to their Chinese accent and “broken” English, my parents ask me to call insurance company representatives on their behalf instead.</div>
+      <div class="panel">Fortunately, in the Chinatown bubble, most of their patients speak Mandarin.</div>
+      <div class="panel">Whenever my parents complain about Chinatown’s inauthenticity, I ask them why they still work there.</div>
+      <div class="panel">They always respond with, “We would not survive anywhere else.”</div>
+      <div class="panel">Like my parents, many recent immigrants from China rely on Chinatown to make a living.</div>
+      <div class="panel">Even in the original San Francisco Chinatown, Chinese immigrants provided for their families by selling a false representation of their culture to American tourists.</div>
+      <div class="panel">Although Chinatowns continue as caricatures of where the “Chinaman” might live, these neighborhoods still offer a place for Chinese-Americans to get jobs, gather as a community, and find more traces of their culture than anywhere else in America.</div>
+      <div class="panel">However, settling for these “chinoiserie-towns” perpetuates American stereotypes of China, painting an incomplete, broad-stroked picture of Chinese culture and people.</div>
+      <div class="panel">Yet, for Chinese immigrants, having an inauthentic version of China is better than having none at all.</div>
+      <div class="panel">Since Chinatown does not accurately reflect China, it may not feel like <i>home</i> for us Chinese-Americans, but it still feels like <i>a</i> home.</div>
+      <div class="panel">❑</div>
+
+      <footer class="footer">
+      <p class="text-right"><a href="https://sl2466.github.io/interactive/index.html">Back to Sunnie's Class Website.</a></p>
+      </footer>
+    </div>
+  </body>
+</html>
