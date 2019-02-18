@@ -10,7 +10,6 @@
 	<style>
 		html,
 		body {
-			background: #405D7D;
 			margin: 0;
 		}
 
@@ -20,6 +19,21 @@
 			justify-content: center;
 			align-items: center;
 			z-index: 2;
+		}
+
+		.video-container {
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+		}
+
+		video {
+			width: 100vw;
+			height: 100vh;
+			object-fit: cover;
 		}
 
 			/* lilypads */
@@ -36,7 +50,7 @@
 				top: 10px;
 				left: 10px;
 				transform: rotate(90deg);
-				-webkit-animation-duration: 45s;
+				-webkit-animation-duration: 25s;
 				-webkit-animation-name: sway1;
 				-webkit-animation-iteration-count: infinite;
 				-webkit-animation-direction: alternate;
@@ -49,7 +63,7 @@
 				top: 70px;
 				left: 110px;
 				transform: rotate(90deg);
-				-webkit-animation-duration: 60s;
+				-webkit-animation-duration: 45s;
 				-webkit-animation-name: sway2;
 				-webkit-animation-iteration-count: infinite;
 				-webkit-animation-direction: alternate;
@@ -62,7 +76,7 @@
 				top: 50px;
 				left: 510px;
 				transform: rotate(90deg);
-				-webkit-animation-duration: 80s;
+				-webkit-animation-duration: 50s;
 				-webkit-animation-name: sway1;
 				-webkit-animation-iteration-count: infinite;
 				-webkit-animation-direction: alternate;
@@ -75,7 +89,7 @@
 				top: 12px;
 				left: 800px;
 				transform: rotate(5deg);
-				-webkit-animation-duration: 45s;
+				-webkit-animation-duration: 25s;
 				-webkit-animation-name: sway2;
 				-webkit-animation-iteration-count: infinite;
 				-webkit-animation-direction: alternate;
@@ -108,6 +122,11 @@
 				transform: skew(10.9turn, 0deg);
 				-webkit-animation-duration: 2s;
 				-webkit-animation-name: breathe;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+				-webkit-animation-duration: 5s;
+				-webkit-animation-name: sway2;
 				-webkit-animation-iteration-count: infinite;
 				-webkit-animation-direction: alternate;
 				-webkit-animation-timing-function: ease-in-out;
@@ -260,6 +279,14 @@
 </head>
 
 <body>
+	<!--video-->
+	<div class="video-container">
+	<video autoplay loop muted>
+		<source src="pondwater.mp4" type="video/mp4">
+		</video>
+	</div>
+
+	<!--organism-->
 	<div class="lilypad one"></div>
 	<div class="lilypad two"></div>
 	<div class="lilypad three"></div>
