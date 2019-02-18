@@ -22,8 +22,13 @@
     border-radius: 50%;
     position: absolute;
     left: 730px;
-    top: -10px;
+    top: 60px;
 		z-index: 5;
+		-webkit-animation-duration: 2s;
+		-webkit-animation-name: breathe;
+		-webkit-animation-iteration-count: infinite;
+		-webkit-animation-direction: alternate;
+		-webkit-animation-timing-function: ease-in-out;
 	}
 
 	#onion {
@@ -251,6 +256,16 @@
 		    left: 60px;
 		    bottom: 65%;
 		  }
+		}
+
+		@keyframes breathe {
+			0% {
+				transform: scale(1.2);
+			}
+
+			100% {
+				transform: scale(0.8);
+			}
 		}
 	</style>
 
