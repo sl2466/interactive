@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>CSS Still Life 2</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="canvas.css">
+
+	<style>
+	.canvas {
+		/* if you want to change the background of your canvas, do it here */
+		background: black;
+	}
+	/* this is where you can style the objects in your still life */
+
+	#table {
+		background: #1232FB;
+		height:130px;
+		width:800px;
+		transform: skew(45deg);
+		position: absolute;
+		left:70px;
+		top:310px;
+	}
+
+	/* lamp */
+
+	#lamp {
+		width: 250px;
+	  height: 200px;
+	  background: #fff5cc;
+	  border-radius: 46%;
+	  position: absolute;
+	  top: 200px;
+	  left: 500px;
+	  z-index: 2;
+	  transition: .3s box-shadow ease-out;
+	  -webkit-transition: .3s box-shadow ease-out;
+	  -moz-transition: .3s box-shadow ease-out;
+	  -o-transition: .3s box-shadow ease-out;
+	}
+	#lamp #orb {
+		width: 100%;
+		height: 100%;
+		background: #FFFC38;
+    border-radius: 45%;
+		position: absolute;
+		transition: .3s box-shadow ease-out;
+		-webkit-transition: .3s box-shadow ease-out;
+		-moz-transition: .3s box-shadow ease-out;
+		-o-transition: .3s box-shadow ease-out;
+	}
+	#lamp #orb:hover {
+		box-shadow: 0 0 35px 25px rgba(255, 255, 255, 0.4);
+	}
+	#lamp #stand {
+		width: 140px;
+	  height: 40px;
+	  background-color: #F6D4BF;
+	  border-radius: 0% 0% 50% 50%;
+	  position: absolute;
+	  bottom: -20px;
+	  left: 55px;
+	}
+
+	/* drink */
+
+	#glass {
+		width: 70px;
+		height: 320px;
+		position: absolute;
+		top: 50px;
+		left: 160px;
+		border-left: 1px solid grey;
+		border-right: 1px solid grey;
+	}
+	#glass #top {
+		position: absolute;
+    height: 30px;
+    width: 100%;
+    top: -15px;
+		left: -1px;
+    border-radius: 50%;
+    border: 1px solid grey;
+	}
+	#glass #water {
+		position: absolute;
+		top: 60%;
+		height: 40%;
+		width: 100%;
+		background: purple;
+		opacity: 0.6;
+	}
+	#glass #water-top {
+		position: absolute;
+		top: calc(60% - 15px);
+		height: 30px;
+		width: 100%;
+		border-radius: 50%;
+		background: purple;
+	}
+	#glass #bottom {
+		position: absolute;
+    height: 30px;
+    width: 100%;
+    bottom: -15px;
+    border-radius: 50%;
+    background: purple;
+	}
+	#glass #orb {
+		width: 100%;
+		height: 100%;
+		border-radius: 45%;
+		position: absolute;
+		transition: .5s box-shadow ease-out;
+		-webkit-transition: .5s box-shadow ease-out;
+		-moz-transition: .5s box-shadow ease-out;
+		-o-transition: .5s box-shadow ease-out;
+	}
+	#glass #orb:hover {
+		box-shadow: 0 0 35px 25px rgba(255, 255, 255, 0.4);
+		filter: blur(30px)
+	}
+
+	/* snowglobe */
+	#cats {
+		width: 100px;
+    height: 121px;
+    position: absolute;
+    top: 200px;
+    left: 290px;
+	}
+	#cats #dome {
+		width: 100%;
+		height: 80%;
+		position: absolute;
+		background: grey;
+		opacity: 0.5;
+		border-top-right-radius: 50%;
+		border-top-left-radius: 50%;
+	}
+	#cats #stand {
+		width: 100%;
+		height: 20%;
+		position: absolute;
+		bottom: 0;
+		background: red;
+	}
+	#cats #stand-bottom {
+		width: 100%;
+		height: 20px;
+		border-radius: 50%;
+		position: absolute;
+		bottom: -10px;
+		background: red;
+	}
+	#cats #stand-top {
+		width: 100%;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 15px;
+    background: #f04d4d;
+	}
+	#cats #cat {
+    height: 66px;
+    width: 45px;
+    position: absolute;
+    left: 27px;
+    bottom: 20px;
+	}
+	#cats #cat #body {
+		width: 30%;
+		height: 60%;
+		position: absolute;
+		bottom: 0;
+		background: #F6D4BF;
+		border-top-right-radius: 50%;
+		border-top-left-radius: 50%;
+	}
+	#cats #cat #head {
+		width: 100%;
+		height: 40%;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		background: #F6D4BF;
+		-webkit-animation-duration: .5s;
+	  -webkit-animation-name: bob;
+	  -webkit-animation-iteration-count: infinite;
+	  -webkit-animation-direction: alternate;
+	  -webkit-animation-timing-function: ease-in-out;
+	}
+	@-webkit-keyframes bob {
+		from {
+			transform: rotate(5deg);
+		}
+		to {
+			transform: rotate(-5deg);
+		}
+	}
+	</style>
+
+</head>
+
+<body>
+
+		<!-- this starts the canvas div. do not delete this! -->
+    <div class="canvas">
+
+			<!-- below is where you put your objects in your still life -->
+			<div id="table"></div>
+			<div id="lamp">
+				<div id="light"></div>
+				<div id="stand"></div>
+				<div id="bottom"></div>
+				<div id="orb"></div>
+			</div>
+			<div id="glass">
+				<div id="top"></div>
+				<div id="water-top"></div>
+				<div id="water"></div>
+				<div id="bottom"></div>
+				<div id="orb"></div>
+			</div>
+			<div id="cats">
+				<div id="dome"></div>
+				<div id="stand"></div>
+				<div id="stand-top"></div>
+				<div id="stand-bottom"></div>
+				<div id="cat">
+					<div id="head"></div>
+					<div id="body"></div>
+				</div>
+			</div>
+
+		<!-- this ends the canvas div. do not delete this! -->
+    </div>
+
+</body>
+
+</html>

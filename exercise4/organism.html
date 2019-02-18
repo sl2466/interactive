@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<title>CSS Organism</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+	<style>
+		html,
+		body {
+			background: #405D7D;
+			margin: 0;
+		}
+
+		.flex-container {
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			z-index: 2;
+		}
+
+			/* lilypads */
+
+			.lilypad {
+				position: absolute;
+				background-color: #7DA180;
+				border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+			}
+
+			.lilypad.one {
+				height: 50px;
+				width: 500px;
+				top: 10px;
+				left: 10px;
+				transform: rotate(90deg);
+				-webkit-animation-duration: 45s;
+				-webkit-animation-name: sway1;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			.lilypad.two {
+				height: 30px;
+				width: 300px;
+				top: 70px;
+				left: 110px;
+				transform: rotate(90deg);
+				-webkit-animation-duration: 60s;
+				-webkit-animation-name: sway2;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			.lilypad.three {
+				height: 30px;
+				width: 400px;
+				top: 50px;
+				left: 510px;
+				transform: rotate(90deg);
+				-webkit-animation-duration: 80s;
+				-webkit-animation-name: sway1;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			.lilypad.four {
+				height: 30px;
+				width: 300px;
+				top: 12px;
+				left: 800px;
+				transform: rotate(5deg);
+				-webkit-animation-duration: 45s;
+				-webkit-animation-name: sway2;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			.lilypad.five {
+				height: 30px;
+				width: 600px;
+				top: 60px;
+				left: 1000px;
+				transform: rotate(5deg);
+				-webkit-animation-duration: 60s;
+				-webkit-animation-name: sway1;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			/* euglena */
+
+			#euglena {
+				display: block;
+				width: 500px;
+				height: 200px;
+				background-color: #B0AE5B;
+				border: 3px solid #307F65;
+				border-radius: 50% 50% 30% 30% / 75% 75% 30% 30%;
+				position: relative;
+				transform: skew(10.9turn, 0deg);
+				-webkit-animation-duration: 2s;
+				-webkit-animation-name: breathe;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			#euglena #flagella {
+				height: 5px;
+				width: 400px;
+				background: #307F65;
+				border-top: 2px solid #307F65;
+				border-bottom: 2px solid #307F65;
+				border-radius: 50% 50% 30% 30% / 60% 60% 30% 30%;
+				position: absolute;
+				top: 65%;
+				left: 400px;
+				-webkit-animation-duration: 20s;
+				-webkit-animation-name: sway2;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			#euglena .eye {
+				width: 15px;
+				height: 30px;
+				background: grey;
+				border-radius: 50%;
+				position: absolute;
+				left: 20%;
+				-webkit-animation-duration: 2s;
+				-webkit-animation-name: blink;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			#euglena #eyeL {
+				top: 30%;
+				transform: rotate(10deg);
+			}
+
+			#euglena #eyeR {
+				bottom: 20%;
+				transform: rotate(-10deg);
+			}
+
+			#organelle1 {
+				height: 35px;
+				width: 80px;
+				background: #C45E67;
+				border-radius: 50%;
+				border: 3px solid pink;
+				position: absolute;
+				left: 160px;
+				top: 20px;
+				z-index: 5;
+				-webkit-animation-duration: 2s;
+				-webkit-animation-name: breathe;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			#organelle2 {
+				height: 35px;
+				width: 80px;
+				background: #5183C3;
+				border-radius: 50%;
+				border: 3px solid blue;
+				position: absolute;
+				left: 160px;
+				top: 20px;
+				z-index: 5;
+				-webkit-animation-duration: 2s;
+				-webkit-animation-name: breathe;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			#organelle3 {
+				height: 85px;
+				width: 85px;
+				background: #FCB453;
+				border-radius: 50%;
+				border: 3px solid orange;
+				position: absolute;
+				left: -100px;
+				top: 50px;
+				z-index: 5;
+				-webkit-animation-duration: 2s;
+				-webkit-animation-name: breathe;
+				-webkit-animation-iteration-count: infinite;
+				-webkit-animation-direction: alternate;
+				-webkit-animation-timing-function: ease-in-out;
+			}
+
+			@keyframes sway1 {
+
+				0%,
+				100% {
+					transform: rotate(-4deg);
+				}
+
+				50% {
+					transform: rotate(4deg);
+				}
+			}
+
+			@keyframes sway2 {
+
+				0%,
+				100% {
+					transform: rotate(4deg);
+				}
+
+				50% {
+					transform: rotate(-4deg);
+				}
+			}
+
+			@keyframes breathe {
+				0% {
+					transform: scale(1);
+				}
+
+				100% {
+					transform: scale(0.98);
+				}
+			}
+
+			@keyframes frown {
+				0% {
+					transform: scale(1);
+				}
+
+				100% {
+					transform: scale(1, 1.1);
+				}
+			}
+
+			@keyframes blink {
+				0% {}
+
+				60% {
+					transform: scale(1, 1);
+				}
+
+				70% {
+					transform: scale(1, 0);
+				}
+
+				80% {
+					transform: scale(1, 1);
+				}
+
+				100% {}
+			}
+	</style>
+</head>
+
+<body>
+	<div class="lilypad one"></div>
+	<div class="lilypad two"></div>
+	<div class="lilypad three"></div>
+	<div class="lilypad four"></div>
+	<div class="lilypad five"></div>
+	<div class="flex-container">
+		<div id="euglena" class="center">
+			<div id="flagella"></div>
+			<div id="eyeL" class="eye"></div>
+			<div id="eyeR" class="eye"></div>
+			<div id="organelle1" </div>
+			<div id="organelle2" </div> <div id="organelle3" </div>
+			</div> </div> </body> </html>
