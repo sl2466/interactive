@@ -1,0 +1,914 @@
+<!doctype html>
+<title>Music Archive</title>
+<style>
+  body {
+  margin: 0px;
+}
+
+a{
+  color: #ED1C19;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-gap: 1px;
+  background-color: #001C43;
+  padding: 2px;
+  margin: 0px;
+  border-width: 0px;
+
+}
+
+.grid-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ED1C19;
+  padding: 10px 10px;
+  font-size: 18px;
+  border-color: #001C43;
+  border: 5px;
+  font-size: 2vmin;
+  text-align: center;
+  margin: 1px;
+  height: calc(25vw - 20px); /* SUBTRACTINGs PADDING TOP & BOTTOM */
+  font-family: monaco, Consolas, "Lucida Console", monospace;
+}
+
+.song {
+  display: none;
+}
+
+.grid-item:hover {
+  background-color: #001C43;
+  -webkit-animation: swing 1s ease;
+        animation: swing 1s ease;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+}
+
+.grid-item:hover .date {
+  display: none;
+  color: #ED1C19;
+}
+
+.grid-item:hover .song {
+  display: inline;
+  color: #ED1C19;
+  animation: 1.5s shake infinite alternate;
+}
+
+.grid-item:visited .song {
+  display: inline;
+  color: #ED1C19;
+}
+.grid-item:visited .date {
+  display: none
+  color: #ED1C19;
+}
+
+@keyframes shake {
+0% { transform: skewX(-15deg); }
+5% { transform: skewX(15deg); }
+10% { transform: skewX(-15deg); }
+15% { transform: skewX(15deg); }
+20% { transform: skewX(0deg); }
+100% { transform: skewX(0deg); }
+}
+
+@-webkit-keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+       transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes swing
+{
+    15%
+    {
+        -webkit-transform: translateX(5px);
+        transform: translateX(5px);
+    }
+    30%
+    {
+        -webkit-transform: translateX(-5px);
+        transform: translateX(-5px);
+    }
+    50%
+    {
+        -webkit-transform: translateX(3px);
+        transform: translateX(3px);
+    }
+    65%
+    {
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+    }
+    80%
+    {
+        -webkit-transform: translateX(2px);
+        transform: translateX(2px);
+    }
+    100%
+    {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+
+/* Cursor from http://www.cursors-4u.com */
+* {cursor: url(http://cur.cursors-4u.net/mechanics/mec-1/mec93.cur), auto !important;}
+
+  @media screen and (max-width: 600px) {
+    .grid-container {
+      display: block;
+    }
+    .grid-item {
+      margin: 10px 0;
+      display: block;
+    }
+  }
+</style>
+
+<!--HTML code-->
+<main class="grid">
+  <div class="grid-container">
+
+    <div class="grid-item"><span class="date">Evolution of Teenage Angst</span>
+      <span class="song"><a href="https://66.media.tumblr.com/e72021871a44e1e13f2428834ffe4b75/tumblr_n9c0spR34x1rnf5opo1_500.gif">Sunnie Liu's Music Archives, 2012~present</a>
+      </span></div>
+
+    <div class="grid-item"><span class="date">December 2, 2012 at 3:28PM</span>
+      <span class="song">Papa Roach - Where Did the Angels Go?<br>
+        <audio controls>
+          <source src="Papa Roach - Where Did The Angels Go.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">December 2, 2012 at 3:30PM</span>
+      <span class="song">Papa Roach - The Enemy<br>
+        <audio controls>
+          <source src="Papa Roach - The Enemy.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">December 4, 2012 at 6:11AM</span>
+      <span class="song">Papa Roach - I Devise My Own Demise<br>
+        <audio controls>
+          <source src="Papa Roach - I Devise My Own Demise.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">December 15, 2012 at 7:02PM</span>
+      <span class="song">Papa Roach - Do or Die<br>
+        <audio controls>
+          <source src="Papa Roach - Do or Die.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">December 26, 2012 at 4:28PM</span>
+      <span class="song">Papa Roach - Sometimes<br>
+        <audio controls>
+          <source src="Papa Roach - Sometimes.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 7, 2013 at 2:03PM</span>
+      <span class="song">Pierce The Veil - Tangled In The Great Escape<br>
+        <audio controls>
+          <source src="Pierce The Veil - Tangled In The Great Escape.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 7, 2013 at 2:05PM</span>
+      <span class="song">Pierce The Veil - Besitos<br>
+        <audio controls>
+          <source src="Pierce The Veil - Besitos.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 7, 2013 at 2:06PM</span>
+      <span class="song">Pierce The Veil - Hell Above<br>
+        <audio controls>
+          <source src="Pierce The Veil - Hell Above.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 7, 2013 at 2:08PM</span>
+      <span class="song">Pierce The Veil - Caraphernelia<br>
+        <audio controls>
+          <source src="Pierce The Veil - Caraphernelia.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 7, 2013 at 2:09PM</span>
+      <span class="song">Pierce The Veil - Bulls in the Bronx<br>
+        <audio controls>
+          <source src="Pierce The Veil - Bulls in the Bronx.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 8, 2013 at 5:49PM</span>
+      <span class="song">Pierce The Veil - Stained Glass Eyes and Colorful Tears<br>
+        <audio controls>
+          <source src="Pierce The Veil - Stained Glass Eyes and Colorful Tears.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 8, 2013 at 5:50PM</span>
+      <span class="song">Pierce The Veil - Props & Mayhem<br>
+        <audio controls>
+          <source src="Pierce The Veil - Props & Mayhem.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 8, 2013 at 5:52PM</span>
+      <span class="song">Pierce The Veil - Disasterology<br>
+        <audio controls>
+          <source src="Pierce The Veil - Disasterology.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 8, 2013 at 5:53PM</span>
+      <span class="song">Pierce The Veil - I'm Low On Gas And You Need A Jacket<br>
+        <audio controls>
+          <source src="Pierce The Veil - I'm Low On Gas And You Need A Jacket.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 8, 2013 at 5:54PM</span>
+      <span class="song">Pierce The Veil - One Hundred Sleepless Nights<br>
+        <audio controls>
+          <source src="Pierce The Veil - One Hundred Sleepless Nights.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 8, 2013 at 5:55PM</span>
+      <span class="song">Pierce The Veil - Wonderless<br>
+        <audio controls>
+          <source src="Pierce The Veil - Wonderless.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 8, 2013 at 5:57PM</span>
+      <span class="song">Pierce The Veil - Hold On Till May<br>
+        <audio controls>
+          <source src="Pierce The Veil - Hold On Till May.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 11, 2013 at 8:21AM</span>
+      <span class="song">Red Jumpsuit Apparatus - Your Guardian Angel<br>
+        <audio controls>
+          <source src="Red Jumpsuit Apparatus - Your Guardian Angel.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 12, 2013 at 7:48PM</span>
+      <span class="song">All Time Low - Therapy<br>
+        <audio controls>
+          <source src="All Time Low - Therapy.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 16, 2013 at 10:02PM</span>
+      <span class="song">Pierce The Veil - The Sky Under The Sea<br>
+        <audio controls>
+          <source src="Pierce The Veil - The Sky Under The Sea.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 20, 2013 at 11:17AM</span>
+      <span class="song">All Time Low - Somewhere In Neverland<br>
+        <audio controls>
+          <source src="All Time Low - Somewhere In Neverland.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 22, 2013 at 12:53PM</span>
+      <span class="song">All Time Low - Daydream Away<br>
+        <audio controls>
+          <source src="All Time Low - Daydream Away.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 8, 2013 at 2:59PM</span>
+      <span class="song">Silverstein - Replace You<br>
+        <audio controls>
+          <source src="Silverstein - Replace You.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 8, 2013 at 3:02PM<</span> <span class="song">Silverstein - Massachusetts<br>
+          <audio controls>
+            <source src="Silverstein - Massachusetts.mp3" type="audio/mpeg">
+          </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 14, 2013 at 9:15PM</span>
+      <span class="song">Pierce The Veil - Kissing in Cars<br>
+        <audio controls>
+          <source src="Pierce The Veil - Kissing in Cars.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 14, 2013 at 11:21PM<</span> <span class="song">Sleeping With Sirens - You Kill Me (In A Good Way)<br>
+          <audio controls>
+            <source src="ASleeping With Sirens - You Kill Me (In A Good Way).mp3" type="audio/mpeg">
+          </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 14, 2013 at 11:42PM</span>
+      <span class="song">Sleeping With Sirens - Who Are You Now<br>
+        <audio controls>
+          <source src="Sleeping With Sirens - Who Are You Now.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 14, 2013 at 11:47PM</span>
+      <span class="song">Sleeping with Sirens - James Dean & Audrey Hepburn<br>
+        <audio controls>
+          <source src="Sleeping with Sirens - James Dean & Audrey Hepburn.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 14, 2013 at 11:49PM</span>
+      <span class="song">Sleeping With Sirens - Roger Rabbit<br>
+        <audio controls>
+          <source src="Sleeping With Sirens - Roger Rabbit.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 14, 2013 at 11:51PM</span>
+      <span class="song">Sleeping With Sirens - Stomach Tied In Knots<br>
+        <audio controls>
+          <source src="Sleeping With Sirens - Stomach Tied In Knots.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 14, 2013 at 11:58PM</span>
+      <span class="song">Sleeping with Sirens - Don't You Ever Forget About Me<br>
+        <audio controls>
+          <source src="Sleeping with Sirens - Don't You Ever Forget About Me.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 15, 2013 at 12:34PM</span>
+      <span class="song">Paramore - The Only Exception<br>
+        <audio controls>
+          <source src="Paramore - The Only Exception.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 15, 2013 at 1:02AM</span>
+      <span class="song">Paramore ft. Joy Williams - Hate To See Your Heart Break<br>
+        <audio controls>
+          <source src="Paramore ft. Joy Williams - Hate To See Your Heart Break.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 15, 2013 at 1:23AM</span>
+      <span class="song">Paramore - Misguided Ghosts<br>
+        <audio controls>
+          <source src="Paramore - Misguided Ghosts.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 17, 2013 at 4:55PM</span>
+      <span class="song">Paramore - Ignorance<br>
+        <audio controls>
+          <source src="Paramore - Ignorance.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 17, 2013 at 5:09PM</span>
+      <span class="song">Paramore - Brick by Boring Brick<br>
+        <audio controls>
+          <source src="Paramore - Brick by Boring Brick.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 21, 2013 at 2:11AM</span>
+      <span class="song">Mayday Parade - Terrible Things<br>
+        <audio controls>
+          <source src="Mayday Parade - Terrible Things.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 21, 2013 at 8:27AM</span>
+      <span class="song">Mayday Parade - Miserable At Best<br>
+        <audio controls>
+          <source src="Mayday Parade - Miserable At Best.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 23, 2013 at 3:32PM</span>
+      <span class="song">Mayday Parade - I Swear This Time I Mean It<br>
+        <audio controls>
+          <source src="Mayday Parade - I Swear This Time I Mean It.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">March 5, 2013 at 1:53PM</span>
+      <span class="song">Paramore - Moving On<br>
+        <audio controls>
+          <source src="Paramore - Moving On.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">April 30, 2013 at 7:48PM</span>
+      <span class="song">Paramore - (One Of Those) Crazy Girls<br>
+        <audio controls>
+          <source src="Paramore - (One Of Those) Crazy Girls.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">May 1, 2013 at 10:06PM</span>
+      <span class="song">Paramore - When It Rains<br>
+        <audio controls>
+          <source src="Paramore - When It Rains.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">May 29, 2013 at 9:17PM</span>
+      <span class="song">Sleeping With Sirens - Madness<br>
+        <audio controls>
+          <source src="Sleeping With Sirens - Madness.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">May 29, 2013 at 9:21PM</span>
+      <span class="song">Sleeping With Sirens - Two Chord<br>
+        <audio controls>
+          <source src="Sleeping With Sirens - Two Chord.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">May 29, 2013 at 9:25PM</span>
+      <span class="song">Sleeping With Sirens - November<br>
+        <audio controls>
+          <source src="Sleeping With Sirens - November.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">June 8, 2013 at 2:03AM</span>
+      <span class="song">Isles & Glaciers - Cemetery Weather<br>
+        <audio controls>
+          <source src="Isles & Glaciers - Cemetery Weather.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">June 15, 2013 at 1:39PM</span>
+      <span class="song">You Me At Six - Crash<br>
+        <audio controls>
+          <source src="You Me At Six - Crash.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">November 1, 2013 at 2:04AM</span>
+      <span class="song">Panic! At The Disco - Northern Downpour<br>
+        <audio controls>
+          <source src="Panic! At The Disco - Northern Downpour.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">November 2, 2013 at 2:52AM</span>
+      <span class="song">Marianas Trench - Alibis<br>
+        <audio controls>
+          <source src="Marianas Trench - Alibis.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 9, 2014 at 10:47PM</span>
+      <span class="song">Relient K - Be my Escape<br>
+        <audio controls>
+          <source src="Relient K - Be my Escape.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 9, 2014 at 10:50PM</span>
+      <span class="song">Relient K - More Than Useless<br>
+        <audio controls>
+          <source src="Relient K - More Than Useless.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 9, 2014 at 10:51PM</span>
+      <span class="song">Relient K - I So Hate Consequences<br>
+        <audio controls>
+          <source src="Relient K - I So Hate Consequences.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 9, 2014 at 10:53PM</span>
+      <span class="song">Relient K - Bite My Tongue<br>
+        <audio controls>
+          <source src="Relient K - Bite My Tongue.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 9, 2014 at 10:55PM</span>
+      <span class="song">Relient K - The Truth<br>
+        <audio controls>
+          <source src="Relient K - The Truth.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 9, 2014 at 10:57PM</span>
+      <span class="song">Relient K - Who I Am Hates Who I've Been<br>
+        <audio controls>
+          <source src="Relient K - Who I Am Hates Who I've Been.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 11, 2014 at 7:01PM</span>
+      <span class="song">Relient K - Life After Death and Taxes<br>
+        <audio controls>
+          <source src="Relient K - Life After Death and Taxes.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 11, 2014 at 7:08PM</span>
+      <span class="song">Relient K - This Week The Trend<br>
+        <audio controls>
+          <source src="Relient K - This Week The Trend.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 11, 2014 at 7:11PM</span>
+      <span class="song">Relient K - Getting Into You<br>
+        <audio controls>
+          <source src="Relient K - Getting Into You.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 11, 2014 at 7:14PM</span>
+      <span class="song">Relient K - Deathbed<br>
+        <audio controls>
+          <source src="Relient K - Deathbed.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 3, 2014 at 11:21PM</span>
+      <span class="song">Against The Current - Dreaming Alone<br>
+        <audio controls>
+          <source src="Against The Current - Dreaming Alone.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">February 20, 2014 at 1:39PM</span>
+      <span class="song">The Antlers - Epilogue<br>
+        <audio controls>
+          <source src="The Antlers - Epilogue.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+
+    <div class="grid-item"><span class="date">February 28, 2014 at 3:58PM</span>
+      <span class="song">Go Radio - Goodnight Moon<br>
+        <audio controls>
+          <source src="Go Radio - Goodnight Moon.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">March 15, 2014 at 4:13AM</span>
+      <span class="song">The Pretty Reckless - You<br>
+        <audio controls>
+          <source src="The Pretty Reckless - You.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">April 23, 2014 at 5:36PM</span>
+      <span class="song">I the Mighty - Dreamer<br>
+        <audio controls>
+          <source src="I the Mighty - Dreamer.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">May 2, 2014 at 8:42PM</span>
+      <span class="song">Delta Spirit - Bushwick Blues<br>
+        <audio controls>
+          <source src="Delta Spirit - Bushwick Blues.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">May 30, 2014 at 9:28AM</span>
+      <span class="song">Sonic Youth - Sunday<br>
+        <audio controls>
+          <source src="Sonic Youth - Sunday.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">June 19, 2014 at 2:04AM</span>
+      <span class="song">Tropical Zombie - Waterslides<br>
+        <audio controls>
+          <source src="Tropical Zombie - Waterslides.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">July 21, 2014 at 3:16AM</span>
+      <span class="song">Good Morning - Once You Know<br>
+        <audio controls>
+          <source src="Good Morning - Once You Know.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">July 21, 2014 at 3:19AM</span>
+      <span class="song">Good Morning - Warned You<br>
+        <audio controls>
+          <source src="Good Morning - Warned You.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">July 21, 2014 at 3:22AM</span>
+      <span class="song">Good Morning - Wednesday<br>
+        <audio controls>
+          <source src="Good Morning - Wednesday.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 6, 2015 at 4:11AM</span>
+      <span class="song">Muse - Hysteria<br>
+        <audio controls>
+          <source src="Muse - Hysteria.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 7, 2015 at 5:52PM</span>
+      <span class="song">Muse - Stockholm Syndrome<br>
+        <audio controls>
+          <source src="Muse - Stockholm Syndrome.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 7, 2015 at 6:17PM</span>
+      <span class="song">Muse - Resistance<br>
+        <audio controls>
+          <source src="Muse - Resistance.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 7, 2015 at 6:28PM</span>
+      <span class="song">Muse - Starlight<br>
+        <audio controls>
+          <source src="Muse - Starlight.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 9, 2015 at 12:03PM</span>
+      <span class="song">Muse - Time Is Running out<br>
+        <audio controls>
+          <source src="Muse - Time Is Running out.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 9, 2015 at 12:09PM</span>
+      <span class="song">Muse - Uprising<br>
+        <audio controls>
+          <source src="Muse - Uprising.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 9, 2015 at 12:11PM</span>
+      <span class="song">Muse - Unintended<br>
+        <audio controls>
+          <source src="Muse - Unintended.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">January 9, 2015 at 12:15PM</span>
+      <span class="song">Muse - Psycho<br>
+        <audio controls>
+          <source src="Muse - Psycho.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">March 24, 2015 at 1:52AM</span>
+      <span class="song">The Killers - Someone Told Me<br>
+        <audio controls>
+          <source src="The Killers - Someone Told Me.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">March 24, 2015 at 1:56AM</span>
+      <span class="song">The Killers - Midnight Show<br>
+        <audio controls>
+          <source src="The Killers - Midnight Show.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">March 24, 2015 at 2:04AM</span>
+      <span class="song">The Killers - Everything Will Be Alright<br>
+        <audio controls>
+          <source src="The Killers - Everything Will Be Alright.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">March 13, 2015 at 11:41AM</span>
+      <span class="song">Neutral Milk Hotel - Holland, 1945<br>
+        <audio controls>
+          <source src="Neutral Milk Hotel - Holland, 1945.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">March 13, 2015 at 11:57AM</span>
+      <span class="song">Neutral Milk Hotel - In the Aeroplane Over the Sea<br>
+        <audio controls>
+          <source src="Neutral Milk Hotel - In the Aeroplane Over the Sea.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">April 2, 2015 at 8:16AM</span>
+      <span class="song">Kasabian - Goodbye Kiss<br>
+        <audio controls>
+          <source src="Kasabian - Goodbye Kiss.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">April 10, 2015 at 9:24AM</span>
+      <span class="song">Braid - East End Hollows<br>
+        <audio controls>
+          <source src="Braid - East End Hollows.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">April 28, 2015 at 5:41PM</span>
+      <span class="song">Peace - Perfect Skin<br>
+        <audio controls>
+          <source src="Peace - Perfect Skin.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">May 15, 2015 at 1:02AM</span>
+      <span class="song">The Fratellis - Whistle For The Choir<br>
+        <audio controls>
+          <source src="The Fratellis - Whistle For The Choir.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">May 21, 2015 at 3:29PM</span>
+      <span class="song">Howler - Back Of Your Neck<br>
+        <audio controls>
+          <source src="Howler - Back Of Your Neck.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">June 14, 2015 at 10:36AM</span>
+      <span class="song">Paper Tigers - Norway<br>
+        <audio controls>
+          <source src="Paper Tigers - Norway.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">July 29, 2015 at 4:48PM</span>
+      <span class="song">Levitation Room - Friends<br>
+        <audio controls>
+          <source src="Levitation Room - Friends.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">August 3, 2015 at 2:17AM</span>
+      <span class="song">Pavement - Harness Your Hopes<br>
+        <audio controls>
+          <source src="Pavement - Harness Your Hopes.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">August 11, 2015 at 9:20PM</span>
+      <span class="song">Magic City Hippies - Limestone<br>
+        <audio controls>
+          <source src="Magic City Hippies - Limestone.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">August 31, 2015 at 5:31PM</span>
+      <span class="song">Best Coast - When I'm With You<br>
+        <audio controls>
+          <source src="Best Coast - When I'm With You.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">September 26, 2015 at 7:53PM</span>
+      <span class="song">Braid - East End Hollows<br>
+        <audio controls>
+          <source src="Buddha Trixie - Nobody Hangs Out.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">October 4, 2015 at 6:42PM</span>
+      <span class="song">Girls - Hellhole Ratrace<br>
+        <audio controls>
+          <source src="Girls - Hellhole Ratrace.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">October 9, 2015 at 2:19AM</span>
+      <span class="song">Smith Westerns - 3am Spiritual<br>
+        <audio controls>
+          <source src="Smith Westerns -3am Spiritual.mp33" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">October 13, 2015 at 9:00PM</span>
+      <span class="song">Karen O - Rapt<br>
+        <audio controls>
+          <source src="Karen O - Rapt.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">October 27, 2015 at 10:04AM</span>
+      <span class="song">The Helio Sequence - Lately<br>
+        <audio controls>
+          <source src="The Helio Sequence - Lately.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">November 1, 2015 at 8:56PM</span>
+      <span class="song">The Ninjas - Morphine<br>
+        <audio controls>
+          <source src="The Ninjas - Morphine.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">November 8, 2015 at 3:22AM</span>
+      <span class="song">Bedroom - Hide<br>
+        <audio controls>
+          <source src="Bedroom - Hide.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">November 9, 2015 at 4:16PM</span>
+      <span class="song">Radiator Hospital - Fireworks<br>
+        <audio controls>
+          <source src="Radiator Hospital - Fireworks.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">November 15, 2015 at 11:32PM</span>
+      <span class="song">Grizzly Bear - Knife<br>
+        <audio controls>
+          <source src="Grizzly Bear - Knife.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">December 20, 2015 at 9:48AM</span>
+      <span class="song">The Libertines - Barbarianss<br>
+        <audio controls>
+          <source src="The Libertines - Barbarians.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+    <div class="grid-item"><span class="date">December 20, 2015 at 9:57AM</span>
+      <span class="song">The Libertines - You're My Waterloo<br>
+        <audio controls>
+          <source src="The Libertines - You're My Waterloo.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">December 20, 2015 at 10:01AM</span>
+      <span class="song">The Libertines - Narcissist<br>
+        <audio controls>
+          <source src="The Libertines - Narcissist.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+    <div class="grid-item"><span class="date">December 20, 2015 at 10:04AM</span>
+      <span class="song">The Libertines - Last Post on the Bugle<br>
+        <audio controls>
+          <source src="The Libertines - Last Post on the Bugle.mp3" type="audio/mpeg">
+        </audio>
+      </span></div>
+
+
+    <div class="grid-item"><span class="date">❑</span>
+      <span class="song"><a href="https://sl2466.github.io/interactive/index.html">Back to Sunnie's Class Website.</a>
+      </span></div>
+
+</main>
