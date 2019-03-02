@@ -1,0 +1,21 @@
+/* my class site stylesheet */
+
+h1, h2, h3, h4, h5, h6, p, a, ol, li {
+  font-family: "Andale Mono", AndaleMono, monospace;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  color: #4200FF;
+}
+
+p{
+  font-size: 20px;
+}
+
+body{
+  background-color: #C748FA;
+}
+
+.text-right{
+  text-align: right;
+}
